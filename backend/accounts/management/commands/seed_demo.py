@@ -293,7 +293,7 @@ QUESTION_TRANSLATIONS = {
 
 THERAPISTS = [
     {
-        "email": "therapist@theranova.dz", "first": "Abdeldjalil", "last": "Belghoul",
+        "email": "therapist@theranova.dz", "first": "Nabil", "last": "Cherif",
         "codes": ["anxiete", "depression", "confiance"], "types": ["Individuel"],
         "years": 12, "price": 2800, "ville": "Béjaïa", "langues": ["Français", "English", "العربية"],
         "approche": "Thérapie cognitive et comportementale (TCC)",
@@ -302,7 +302,7 @@ THERAPISTS = [
         "cabinet": "Cabinet TheraNova — Centre-ville, Béjaïa",
     },
     {
-        "email": "imene.bouchareb@theranova.dz", "first": "Imene", "last": "Bouchareb",
+        "email": "imene.bouchareb@theranova.dz", "first": "Samira", "last": "Lemdani",
         "codes": ["couple", "famille", "confiance"], "types": ["Individuel", "Couple", "Famille"],
         "years": 9, "price": 3000, "ville": "Alger", "langues": ["Français", "العربية"],
         "approche": "Thérapie systémique et communication non violente",
@@ -311,16 +311,16 @@ THERAPISTS = [
         "cabinet": "Cabinet TheraNova — Hydra, Alger",
     },
     {
-        "email": "yasmine.khaled@theranova.dz", "first": "Yasmine", "last": "Khaled",
+        "email": "yasmine.khaled@theranova.dz", "first": "Farid", "last": "Oubelaid",
         "codes": ["trauma", "anxiete"], "types": ["Individuel"],
         "years": 7, "price": 3200, "ville": "Béjaïa", "langues": ["Français", "English"],
         "approche": "EMDR et thérapie centrée sur le trauma",
-        "bio": "Formée à l'EMDR, j'accompagne les personnes ayant vécu des événements difficiles. Mon travail vise à apaiser les souvenirs envahissants et à restaurer un sentiment de sécurité.",
+        "bio": "Formé à l'EMDR, j'accompagne les personnes ayant vécu des événements difficiles. Mon travail vise à apaiser les souvenirs envahissants et à restaurer un sentiment de sécurité.",
         "diplomes": "Master en Psychologie Clinique — Université de Tizi Ouzou\nFormation EMDR Europe",
         "cabinet": "Cabinet TheraNova — Béjaïa",
     },
     {
-        "email": "rayane.taraft@theranova.dz", "first": "Rayane", "last": "Taraft",
+        "email": "rayane.taraft@theranova.dz", "first": "Wassila", "last": "Ziani",
         "codes": ["orientation", "confiance", "anxiete"], "types": ["Individuel"],
         "years": 5, "price": 2500, "ville": "Béjaïa", "langues": ["Français", "English", "العربية"],
         "approche": "Approche humaniste et coaching de carrière",
@@ -329,7 +329,7 @@ THERAPISTS = [
         "cabinet": "Cabinet TheraNova — Campus ESTIN, Béjaïa",
     },
     {
-        "email": "dalia.serrir@theranova.dz", "first": "Dalia", "last": "Serrir",
+        "email": "dalia.serrir@theranova.dz", "first": "Mourad", "last": "Belkhir",
         "codes": ["depression", "addiction"], "types": ["Individuel"],
         "years": 10, "price": 2700, "ville": "Oran", "langues": ["Français", "العربية"],
         "approche": "Thérapie motivationnelle et prévention de la rechute",
@@ -338,7 +338,7 @@ THERAPISTS = [
         "cabinet": "Cabinet TheraNova — Oran",
     },
     {
-        "email": "angela.tienderebeogo@theranova.dz", "first": "Angela", "last": "Tienderebeogo",
+        "email": "angela.tienderebeogo@theranova.dz", "first": "Hana", "last": "Ferhat",
         "codes": ["famille", "couple", "trauma"], "types": ["Individuel", "Couple", "Famille"],
         "years": 8, "price": 2600, "ville": "Béjaïa", "langues": ["Français", "English"],
         "approche": "Thérapie familiale et approche narrative",
@@ -418,8 +418,8 @@ class Command(BaseCommand):
         # Users
         # ------------------------------------------------------------------
         admin = User.objects.create_user(
-            email="admin@theranova.dz", password="Admin123!", first_name="Amina",
-            last_name="Responsable", role=User.Role.ADMIN, is_staff=True, is_superuser=True,
+            email="admin@theranova.dz", password="Admin123!", first_name="Karima",
+            last_name="Soltani", role=User.Role.ADMIN, is_staff=True, is_superuser=True,
             phone="+213 550 00 00 01", language="fr", avatar="",
         )
 
@@ -454,18 +454,18 @@ class Command(BaseCommand):
             therapist_profiles[data["email"]] = profile
 
         patients_data = [
-            ("patient@theranova.dz", "Yasmine", "Benali", "F", today - timedelta(days=365 * 23 + 120),
+            ("patient@theranova.dz", "Salma", "Boudiaf", "F", today - timedelta(days=365 * 23 + 120),
              "Étudiante en 2e année — ESTIN", True, "Béjaïa", 2,
-             "https://api.dicebear.com/9.x/notionists/svg?seed=YasmineBenali&backgroundColor=ccd5b5"),
-            ("karim@theranova.dz", "Karim", "Haddad", "M", today - timedelta(days=365 * 26 + 45),
+             "https://api.dicebear.com/9.x/notionists/svg?seed=SalmaBoudiaf&backgroundColor=ccd5b5"),
+            ("karim@theranova.dz", "Anis", "Gherbi", "M", today - timedelta(days=365 * 26 + 45),
              "Ingénieur logiciel", False, "Alger", 0,
-             "https://api.dicebear.com/9.x/notionists/svg?seed=KarimHaddad&backgroundColor=ccd5b5"),
-            ("lina@theranova.dz", "Lina", "Mansouri", "F", today - timedelta(days=365 * 21 + 200),
+             "https://api.dicebear.com/9.x/notionists/svg?seed=AnisGherbi&backgroundColor=ccd5b5"),
+            ("lina@theranova.dz", "Rania", "Touati", "F", today - timedelta(days=365 * 21 + 200),
              "Étudiante en médecine", True, "Tizi Ouzou", 3,
-             "https://api.dicebear.com/9.x/notionists/svg?seed=LinaMansouri&backgroundColor=ccd5b5"),
-            ("sofiane@theranova.dz", "Sofiane", "Ait Ali", "M", today - timedelta(days=365 * 29 + 12),
+             "https://api.dicebear.com/9.x/notionists/svg?seed=RaniaTouati&backgroundColor=ccd5b5"),
+            ("sofiane@theranova.dz", "Yacine", "Boumediene", "M", today - timedelta(days=365 * 29 + 12),
              "Chargé de projet", False, "Béjaïa", 0,
-             "https://api.dicebear.com/9.x/notionists/svg?seed=SofianeAitAli&backgroundColor=ccd5b5"),
+             "https://api.dicebear.com/9.x/notionists/svg?seed=YacineBoumediene&backgroundColor=ccd5b5"),
         ]
         patients = {}
         for email, first, last, sexe, birth, occupation, student, ville, solde, avatar in patients_data:
@@ -672,7 +672,7 @@ class Command(BaseCommand):
             )
             Notification.objects.create(
                 user=therapist_profiles[belghoul].user, titre="Nouvelle demande de rendez-vous",
-                message="Karim Haddad souhaite une séance individuelle.",
+                message="Anis Gherbi souhaite une séance individuelle.",
                 type=Notification.Type.RAPPEL,
             )
 
@@ -699,7 +699,7 @@ class Command(BaseCommand):
             )
             ParticipantDemande.objects.create(
                 demande=couple, patient=patients["sofiane@theranova.dz"].user,
-                email="sofiane@theranova.dz", nom="Sofiane Ait Ali", montant=Decimal("2400"),
+                email="sofiane@theranova.dz", nom="Yacine Boumediene", montant=Decimal("2400"),
             )
 
         # ------------------------------------------------------------------
@@ -761,7 +761,7 @@ class Command(BaseCommand):
         notes = {
             4: "Journée difficile, beaucoup de pression avant les partiels.",
             5: "Fatigue et doutes, mais j'ai réussi à sortir marcher.",
-            8: "Bonne journée, séance avec Dr Belghoul et discussion apaisante.",
+            8: "Bonne journée, séance avec Dr Cherif et discussion apaisante.",
             9: "Je me sens enfin légère, les exercices de respiration m'aident beaucoup.",
         }
         emotions = {9: "joyeux", 8: "calme", 7: "calme", 6: "neutre", 5: "anxieux", 4: "triste"}
@@ -769,7 +769,7 @@ class Command(BaseCommand):
             day = today - timedelta(days=len(moods) - index - 1)
             note = notes.get(score, "")
             emotion = emotions.get(score, "neutre")
-            generated = generate_message(score, note, emotion, "Yasmine")
+            generated = generate_message(score, note, emotion, "Salma")
             HumeurEntry.objects.update_or_create(
                 patient=patients["patient@theranova.dz"].user, date_saisie=day,
                 defaults={"score": score, "emotion": emotion, "note": note,
@@ -896,7 +896,7 @@ class Command(BaseCommand):
         if not conversation.messages.exists():
             Message.objects.create(
                 conversation=conversation, sender=therapist_profiles[belghoul].user,
-                contenu="Bonjour Yasmine, comment s'est passée votre semaine ? Avez-vous pu tenir le journal des pensées ?",
+                contenu="Bonjour Salma, comment s'est passée votre semaine ? Avez-vous pu tenir le journal des pensées ?",
                 lu=True,
             )
             Message.objects.create(
@@ -925,7 +925,7 @@ class Command(BaseCommand):
         )
         Notification.objects.create(
             user=patients["patient@theranova.dz"].user, titre="Séance aujourd'hui",
-            message="Votre téléconsultation avec Dr Belghoul commence dans quelques minutes. Le lien sera accessible 15 minutes avant.",
+            message="Votre téléconsultation avec Dr Cherif commence dans quelques minutes. Le lien sera accessible 15 minutes avant.",
             type=Notification.Type.RAPPEL,
         )
         Notification.objects.create(

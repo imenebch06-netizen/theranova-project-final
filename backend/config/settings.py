@@ -170,6 +170,10 @@ SIMPLE_JWT = {
 CORS_ALLOWED_ORIGINS = env_list(
     "CORS_ALLOWED_ORIGINS", "http://localhost:5173,http://127.0.0.1:5173"
 )
+# Regex autorisées (ex. pour Vercel, dont les URLs de preview changent à chaque déploiement) :
+# CORS_ALLOWED_ORIGIN_REGEXES=^https://.*\.vercel\.app$
+CORS_ALLOWED_ORIGIN_REGEXES = env_list("CORS_ALLOWED_ORIGIN_REGEXES")
+
 CORS_ALLOW_CREDENTIALS = True
 
 CSRF_TRUSTED_ORIGINS = CORS_ALLOWED_ORIGINS
